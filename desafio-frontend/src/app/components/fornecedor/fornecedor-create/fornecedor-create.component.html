@@ -1,0 +1,35 @@
+<mat-card class="home mat-elevation-z3">
+    <mat-card-title>
+        Nova Empresa
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" 
+            [(ngModel)]="product.name"
+            name="name"
+            >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CNPJ" 
+            [(ngModel)]="product.cnpj"
+            name="cnpj"
+            >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CEP" 
+            [(ngModel)]="product.cep"
+            name="cep"
+            >
+        </mat-form-field> 
+    </form>
+    <button mat-raised-button (click)="createProduct()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
+
+
+
