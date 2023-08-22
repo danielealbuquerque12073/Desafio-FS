@@ -31,7 +31,14 @@ import { MatSortModule } from '@angular/material/sort'
 import localePt from '@angular/common/locales/pt'
 import {registerLocaleData} from '@angular/common';
 import { EmpresaUpdateComponent } from './components/empresa/empresa-update/empresa-update.component';
-import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component'
+import { EmpresaDeleteComponent } from './components/empresa/empresa-delete/empresa-delete.component';
+
+import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
+import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
+import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
+
 
 registerLocaleData(localePt);
 
@@ -43,10 +50,15 @@ registerLocaleData(localePt);
     NavComponent,
     HomeComponent,
     EmpresaCrudComponent,
+    FornecedorCrudComponent,
     EmpresaCreateComponent,
     EmpresaReadComponent,
     EmpresaUpdateComponent,
     EmpresaDeleteComponent,
+    FornecedorCreateComponent,
+    FornecedorReadComponent,
+    FornecedorUpdateComponent,
+    FornecedorDeleteComponent,
   ],
   imports: [
     BrowserModule,

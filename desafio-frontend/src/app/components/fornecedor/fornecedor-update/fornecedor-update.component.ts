@@ -1,38 +1,38 @@
 import { Router, ActivatedRoute } from '@angular/router';
-import { ProductService } from './../product.service';
+import { FornecedorService } from './../fornecedor.service';
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product.model';
+import { Fornecedor } from '../fornecedor.model';
 
 @Component({
-  selector: 'app-product-update',
-  templateUrl: './product-update.component.html',
-  styleUrls: ['./product-update.component.css']
+  selector: 'app-fornecedor-update',
+  templateUrl: './fornecedor-update.component.html',
+  styleUrls: ['./fornecedor-update.component.css']
 })
-export class ProductUpdateComponent implements OnInit {
+export class FornecedorUpdateComponent implements OnInit {
 
-  product: Product;
+  fornecedor: Fornecedor;
 
   constructor(
-    private productService: ProductService, 
+    private fornecedorService: FornecedorService, 
     private router: Router, 
     private route: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')
-    this.productService.readById(id).subscribe(product => {
-      this.product = product
+    this.fornecedorService.readById(id).subscribe(fornecedor => {
+      this.fornecedor = fornecedor
     })
   }
 
-  updateProduct():void {
-    this.productService.update(this.product).subscribe(()=>{
-      this.productService.showMensage('Produto atualizado com sucesso')
-      this.router.navigate(['/products']);
+  updateFornecedor():void {
+    this.fornecedorService.update(this.fornecedor).subscribe(()=>{
+      this.fornecedorService.showMensage('Fornecedor atualizado com sucesso')
+      this.router.navigate(['/fornecedor']);
     });
   }
 
   cancel():void {
-    this.router.navigate(['/products'])
+    this.router.navigate(['/fornecedor'])
   }
 }

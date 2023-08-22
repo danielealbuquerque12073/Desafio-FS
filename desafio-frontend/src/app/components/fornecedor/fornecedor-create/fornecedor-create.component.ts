@@ -1,36 +1,37 @@
-import { Product } from './../product.model';
+import { Fornecedor } from './../fornecedor.model';
 import { Router } from '@angular/router';
-import { ProductService } from './../product.service';
+import { FornecedorService } from './../fornecedor.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-product-create',
-  templateUrl: './product-create.component.html',
-  styleUrls: ['./product-create.component.css']
+  selector: 'app-fornecedor-create',
+  templateUrl: './fornecedor-create.component.html',
+  styleUrls: ['./fornecedor-create.component.css']
 })
-export class ProductCreateComponent implements OnInit {
+export class FornecedorCreateComponent implements OnInit {
 
-  product : Product = {
+  fornecedor : Fornecedor = {
     name: '',
+    email: null,
     cnpj: null,
     cep: null,
   }
 
-  constructor(private productService: ProductService, private router: Router) { }
+  constructor(private fornecedorService: FornecedorService, private router: Router) { }
 
   ngOnInit(): void {
   
   }
 
-  createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMensage('Produto registrado com sucesso')
-      this.router.navigate(['/products'])
+  createFornecedor(): void {
+    this.fornecedorService.create(this.fornecedor).subscribe(() => {
+      this.fornecedorService.showMensage('Fornecedor registrado com sucesso')
+      this.router.navigate(['/fornecedor'])
     })
   }
 
   cancel(): void {
-    this.router.navigate(['/products'])
+    this.router.navigate(['/fornecedor'])
   }
 
 }

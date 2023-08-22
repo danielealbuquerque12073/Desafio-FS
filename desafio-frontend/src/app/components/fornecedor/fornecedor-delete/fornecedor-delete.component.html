@@ -1,31 +1,34 @@
 <mat-card class="home mat-elevation-z3">
     <mat-card-title>
-        Excluir Empresa
+        Excluir Fornecedor
     </mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" 
-            [value]="product.name"
-            disabled
+            <input matInput placeholder="Nome Fantasia" 
+            [(ngModel)]="fornecedor.name"
             name="name"
             >
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CNPJ" 
-            [value]="product.cnpj"
-            disabled
+            <input matInput placeholder="E-mail" 
+            [(ngModel)]="fornecedor.email"
+            name="email"
+            >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CNPJ/CPF - " 
+            [(ngModel)]="fornecedor.cnpj"
             name="cnpj"
             >
-        </mat-form-field> 
+        </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CEP" 
-            [value]="product.cep"
-            disabled
+            <input matInput placeholder="CEP - 000.00-000" 
+            [(ngModel)]="fornecedor.cep"
             name="cep"
             >
         </mat-form-field> 
     </form>
-    <button mat-raised-button (click)="deleteProduct()" color="warn">
+    <button mat-raised-button (click)="deleteFornecedor()" color="warn">
         Excluir
     </button>
     

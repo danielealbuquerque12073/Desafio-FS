@@ -1,21 +1,21 @@
-import { ProductService } from './../product.service';
-import { Product } from './../product.model';
+import { FornecedorService } from './../fornecedor.service';
+import { Fornecedor } from './../fornecedor.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-product-read',
-  templateUrl: './product-read.component.html',
-  styleUrls: ['./product-read.component.css']
+  selector: 'app-fornecedor-read',
+  templateUrl: './fornecedor-read.component.html',
+  styleUrls: ['./fornecedor-read.component.css']
 })
-export class ProductReadComponent implements OnInit {
+export class FornecedorReadComponent implements OnInit {
 
-  products: Product[]
-  displayedColumns = ['id', 'name', 'cnpj', 'cep', 'action']
+  fornecedor: Fornecedor[]
+  displayedColumns = ['id', 'name', 'email', 'cnpj', 'cep', 'action']
 
-  constructor(private productService: ProductService) {
-    this.productService.read().subscribe(products => {
-      this.products = products
-      console.log(products)
+  constructor(private fornecedorService: FornecedorService) {
+    this.fornecedorService.read().subscribe(fornecedor => {
+      this.fornecedor = fornecedor
+      console.log(fornecedor)
     })
    }
 
