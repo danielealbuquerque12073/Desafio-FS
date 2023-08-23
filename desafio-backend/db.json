@@ -4,13 +4,29 @@
       "name": "Accenture",
       "cnpj": "96.534.094/0001-58",
       "cep": "50060-004",
-      "id": 2
+      "id": 1
     },
     {
       "name": "TecSoft",
       "cnpj": "11.149.046/0001-00",
-      "cep": "54.737-110",
+      "cep": "54.737-112",
+      "id": 2
+    }
+  ],
+  "fornecedor": [
+    {
+      "name": "Dell Industry",
+      "email": "dell.service@dell.com",
+      "cnpj": "96.534.094/0001-58",
+      "cep": "13184-654",
       "id": 3
+    },
+    {
+      "name": "Lenovo",
+      "email": "novotec@lenovo.com",
+      "cnpj": "07.275.920/0001-61",
+      "cep": "13337-200",
+      "id": 4
     }
   ]
 }

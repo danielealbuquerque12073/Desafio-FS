@@ -1,26 +1,32 @@
 <mat-card class="home mat-elevation-z3">
     <mat-card-title>
-        Novo Fornecedor
+        Editar Fornecedor
     </mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" 
+            <input matInput placeholder="Nome Fantasia" 
             [(ngModel)]="fornecedor.name"
             name="name"
             >
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CNPJ" 
+            <input matInput placeholder="E-mail" 
+            [(ngModel)]="fornecedor.email"
+            name="email"
+            >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CNPJ/CPF - " 
             [(ngModel)]="fornecedor.cnpj"
             name="cnpj"
             >
-        </mat-form-field> 
+        </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CEP" 
+            <input matInput placeholder="CEP - 000.00-000" 
             [(ngModel)]="fornecedor.cep"
             name="cep"
             >
-        </mat-form-field> 
+        </mat-form-field>  
     </form>
     <button mat-raised-button (click)="updateFornecedor()" color="primary">
         Salvar

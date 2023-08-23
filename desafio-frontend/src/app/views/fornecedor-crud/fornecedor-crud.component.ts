@@ -15,7 +15,7 @@ export class FornecedorCrudComponent implements OnInit {
   
   }
 
-  navigateTofornecedorCreate(): void {
+  navigateToFornecedorCreate(): void {
     this.router.navigate(['/fornecedor/create'])
   }
 }
